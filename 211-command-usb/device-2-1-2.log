@@ -1,0 +1,29 @@
+источник: учебный пример, без платы; время и USB-идентичность модельные
+задание: 2.1.2
+проект: 211-command-usb
+устройство: 2e8a:000a
+серийный номер: 0000000000000000
+порт: SIMULATED
+начало: 2026-10-23T00:00:00+03:00 (условная эпоха примера)
+модель: ELF/bin SHA256 09439411100342585cb3403d1298782d40bb9626791ede9b30c8742461d04748; стек/куча — модель размещения
+   0.000 --> enable
+   0.010 <-- enable
+   0.011 <-- inf cmd_enable:18 led on
+   2.000 --> disable
+   2.010 <-- disable
+   2.011 <-- inf cmd_disable:19 led off
+   4.000 --> info
+   4.010 <-- info
+   4.011 <-- project: 211-command-usb
+   4.012 <-- repo: https://github.com/Maksim-Osipov/es-student
+   4.013 <-- board: pico
+   4.014 <-- serial: 0000000000000000
+   4.015 <-- chip: manufacturer 0x927, part 0x0002, revision 2
+   4.016 <-- pico-sdk: 2.3.0
+   6.000 --> ping
+   6.010 <-- ping
+   6.011 <-- pong
+   8.000 --> nosuchcommand
+   8.010 <-- nosuchcommand
+   8.011 <-- err handle_command:45 unknown command: nosuchcommand
+итог: отправлено кадров 5, принято строк 15

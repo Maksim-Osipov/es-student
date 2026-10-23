@@ -1,0 +1,26 @@
+источник: учебный пример, без платы; время и USB-идентичность модельные
+задание: 2.2.1
+проект: 221-command-time
+устройство: 2e8a:000a
+серийный номер: 0000000000000000
+порт: SIMULATED
+начало: 2026-10-23T00:00:00+03:00 (условная эпоха примера)
+модель: 585 тактов/член; ROSC=6453 кГц — пример, не замер; ELF/bin SHA256 0d2ec128e29585d86ec9e9d67a4b7e443f7687245c486eac786d5bba8a898cb4
+   0.000 --> clk_info
+   0.010 <-- clk_info
+   0.011 <-- clock      configured measured
+   0.012 <-- clk_ref       12000    12000 kHz
+   0.013 <-- clk_sys      125000   125000 kHz
+   0.014 <-- clk_peri     125000   125000 kHz
+   0.015 <-- clk_usb       48000    48000 kHz
+   0.016 <-- clk_adc       48000    48000 kHz
+   0.017 <-- rosc 6453
+   2.000 --> info
+   2.010 <-- info
+   2.011 <-- project: 221-command-time
+   2.012 <-- repo: https://github.com/Maksim-Osipov/es-student
+   2.013 <-- board: pico
+   2.014 <-- serial: 0000000000000000
+   2.015 <-- chip: manufacturer 0x927, part 0x0002, revision 2
+   2.016 <-- pico-sdk: 2.3.0
+итог: отправлено кадров 2, принято строк 15

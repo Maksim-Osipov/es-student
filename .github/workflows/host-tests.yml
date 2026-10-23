@@ -1,0 +1,23 @@
+name: Проверка логики на компьютере
+on:
+  push:
+    paths:
+      - 'libs/**'
+      - '231-firmware-template/**'
+      - '239-two-buttons/**'
+      - 'tests/**'
+      - '.github/workflows/host-tests.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - name: Сборка кода задач с тестовыми часами и GPIO
+        run: |
+          cmake -S tests/host -B tests/host/build -DCMAKE_BUILD_TYPE=Debug
+          cmake --build tests/host/build --parallel
+      - name: Проверка логики, API и независимости двух кнопок
+        run: ctest --test-dir tests/host/build --output-on-failure

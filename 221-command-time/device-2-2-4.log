@@ -1,0 +1,31 @@
+источник: учебный пример, без платы; время и USB-идентичность модельные
+задание: 2.2.4
+проект: 221-command-time
+устройство: 2e8a:000a
+серийный номер: 0000000000000000
+порт: SIMULATED
+начало: 2026-10-23T00:00:00+03:00 (условная эпоха примера)
+модель: 585 тактов/член; ROSC=6453 кГц — пример, не замер; ELF/bin SHA256 0d2ec128e29585d86ec9e9d67a4b7e443f7687245c486eac786d5bba8a898cb4
+   0.000 --> main_time_reset
+   0.010 <-- main_time_reset
+   0.011 <-- max reset
+   2.000 --> main_time_exec
+   2.010 <-- main_time_exec
+   2.011 <-- iteration avg 2.40 us, max 500 us
+   3.000 --> calc_pi
+   3.010 <-- calc_pi
+   7.690 <-- pi: 3.14159165
+   7.691 <-- time: 4680 ms
+   9.000 --> main_time_exec
+   9.010 <-- main_time_exec
+   9.011 <-- iteration avg 4.80 us, max 4680500 us
+  14.000 --> main_time_exec
+  14.010 <-- main_time_exec
+  14.011 <-- iteration avg 2.42 us, max 4680500 us
+  15.000 --> main_time_reset
+  15.010 <-- main_time_reset
+  15.011 <-- max reset
+  16.000 --> main_time_exec
+  16.010 <-- main_time_exec
+  16.011 <-- iteration avg 2.40 us, max 500 us
+итог: отправлено кадров 7, принято строк 15

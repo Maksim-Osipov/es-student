@@ -1,0 +1,57 @@
+источник: учебный пример, без платы; время и USB-идентичность модельные
+задание: 2.2.2
+проект: 221-command-time
+устройство: 2e8a:000a
+серийный номер: 0000000000000000
+порт: SIMULATED
+начало: 2026-10-23T00:00:00+03:00 (условная эпоха примера)
+модель: 585 тактов/член; ROSC=6453 кГц — пример, не замер; ELF/bin SHA256 0d2ec128e29585d86ec9e9d67a4b7e443f7687245c486eac786d5bba8a898cb4
+   0.000 --> uptime
+   0.010 <-- uptime
+   0.011 <-- uptime: 5011 ms
+   0.400 --> boot_info
+   0.410 <-- boot_info
+   0.411 <-- vector table   0x10000100
+   0.412 <--   stack top    0x20042000
+   0.413 <--   reset        0x100001f7
+   0.414 <--   reset (even) 0x100001f6
+   0.415 <-- gpio in        0xd0000004
+   0.416 <--   led bit      0
+   0.417 <--   gpio_get     0
+   0.800 --> uptime
+   0.810 <-- uptime
+   0.811 <-- uptime: 5811 ms
+   1.200 --> boot_info
+   1.210 <-- boot_info
+   1.211 <-- vector table   0x10000100
+   1.212 <--   stack top    0x20042000
+   1.213 <--   reset        0x100001f7
+   1.214 <--   reset (even) 0x100001f6
+   1.215 <-- gpio in        0xd0000004
+   1.216 <--   led bit      0
+   1.217 <--   gpio_get     0
+   1.600 --> uptime
+   1.610 <-- uptime
+   1.611 <-- uptime: 6611 ms
+   2.000 --> boot_info
+   2.010 <-- boot_info
+   2.011 <-- vector table   0x10000100
+   2.012 <--   stack top    0x20042000
+   2.013 <--   reset        0x100001f7
+   2.014 <--   reset (even) 0x100001f6
+   2.015 <-- gpio in        0xd0000004
+   2.016 <--   led bit      0
+   2.017 <--   gpio_get     0
+   2.400 --> uptime
+   2.410 <-- uptime
+   2.411 <-- uptime: 7411 ms
+   2.800 --> boot_info
+   2.810 <-- boot_info
+   2.811 <-- vector table   0x10000100
+   2.812 <--   stack top    0x20042000
+   2.813 <--   reset        0x100001f7
+   2.814 <--   reset (even) 0x100001f6
+   2.815 <-- gpio in        0xd0000004
+   2.816 <--   led bit      1
+   2.817 <--   gpio_get     1
+итог: отправлено кадров 8, принято строк 40

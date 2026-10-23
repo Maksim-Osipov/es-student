@@ -1,0 +1,72 @@
+источник: учебный пример, без платы; время и USB-идентичность модельные
+задание: 2.1.4
+проект: 211-command-usb
+устройство: 2e8a:000a
+серийный номер: 0000000000000000
+порт: SIMULATED
+начало: 2026-10-23T00:00:00+03:00 (условная эпоха примера)
+модель: ELF/bin SHA256 09439411100342585cb3403d1298782d40bb9626791ede9b30c8742461d04748; стек/куча — модель размещения
+   0.000 --> fw_info
+   0.010 <-- fw_info
+   0.011 <-- object          address     value
+   0.012 <-- main            0x10000311 0xb5f0
+   0.013 <-- fw_info         0x10000779 0x4b39
+   0.014 <-- commands        0x10007dd8
+   0.015 <-- - enable        0x100002e9
+   0.016 <-- - disable       0x100002c1
+   0.017 <-- - info          0x100002b9
+   0.018 <-- - version       0x100002b1
+   0.019 <-- - ping          0x100002a1
+   0.020 <-- - mem_info      0x10000299
+   0.021 <-- - fw_info       0x10000291
+   0.022 <-- - dev_info      0x10000289
+   0.023 <-- - boot_info     0x10000281
+   0.024 <-- DEVICE_PROJECT  0x10007770 211-command-usb
+   0.025 <-- DEVICE_BOARD    0x100077c8 pico
+   0.026 <-- data_variable   0x20000f54 101
+   0.027 <-- bss_variable    0x20001f1c 1
+   0.028 <-- stack_variable  0x20041f80 1946
+   0.029 <-- heap_variable   0x20002418 1951
+   2.000 --> fw_info
+   2.010 <-- fw_info
+   2.011 <-- object          address     value
+   2.012 <-- main            0x10000311 0xb5f0
+   2.013 <-- fw_info         0x10000779 0x4b39
+   2.014 <-- commands        0x10007dd8
+   2.015 <-- - enable        0x100002e9
+   2.016 <-- - disable       0x100002c1
+   2.017 <-- - info          0x100002b9
+   2.018 <-- - version       0x100002b1
+   2.019 <-- - ping          0x100002a1
+   2.020 <-- - mem_info      0x10000299
+   2.021 <-- - fw_info       0x10000291
+   2.022 <-- - dev_info      0x10000289
+   2.023 <-- - boot_info     0x10000281
+   2.024 <-- DEVICE_PROJECT  0x10007770 211-command-usb
+   2.025 <-- DEVICE_BOARD    0x100077c8 pico
+   2.026 <-- data_variable   0x20000f54 102
+   2.027 <-- bss_variable    0x20001f1c 2
+   2.028 <-- stack_variable  0x20041f80 1946
+   2.029 <-- heap_variable   0x20002418 1951
+   4.000 --> fw_info
+   4.010 <-- fw_info
+   4.011 <-- object          address     value
+   4.012 <-- main            0x10000311 0xb5f0
+   4.013 <-- fw_info         0x10000779 0x4b39
+   4.014 <-- commands        0x10007dd8
+   4.015 <-- - enable        0x100002e9
+   4.016 <-- - disable       0x100002c1
+   4.017 <-- - info          0x100002b9
+   4.018 <-- - version       0x100002b1
+   4.019 <-- - ping          0x100002a1
+   4.020 <-- - mem_info      0x10000299
+   4.021 <-- - fw_info       0x10000291
+   4.022 <-- - dev_info      0x10000289
+   4.023 <-- - boot_info     0x10000281
+   4.024 <-- DEVICE_PROJECT  0x10007770 211-command-usb
+   4.025 <-- DEVICE_BOARD    0x100077c8 pico
+   4.026 <-- data_variable   0x20000f54 103
+   4.027 <-- bss_variable    0x20001f1c 3
+   4.028 <-- stack_variable  0x20041f80 1946
+   4.029 <-- heap_variable   0x20002418 1951
+итог: отправлено кадров 3, принято строк 60
