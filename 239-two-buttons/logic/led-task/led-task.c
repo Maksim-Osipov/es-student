@@ -29,6 +29,7 @@ void led_task_handle(void)
 }
 led_state_t led_task_get_state(void) { return state; }
 void led_task_next_state(void) { led_task_set_state((led_state_t)((state+1)%3)); }
+void led_task_blink(void) { led_task_set_state(LED_STATE_BLINK); }
 void led_task_set_period_ms(uint32_t value)
 {
     if (value) { period_ms=value; last_us=systime_us(); }

@@ -7,14 +7,15 @@
 #include "led-task/led-task.h"
 #include "button-task/button-task.h"
 #include "pi-task/pi-task.h"
+#include <stddef.h>
 enum { WATCH_LOOP, WATCH_COMMAND, WATCH_LED, WATCH_BUTTON, WATCH_PI };
 int main(void)
 {
     platform_init();
     stdio_text_protocol_init();
     led_task_init();
-    button_task_init(0, led_task_next_state);
-    button_task_init(1, led_task_next_period);
+    button_task_init(0, led_task_next_state, led_task_blink);
+    button_task_init(1, led_task_next_period, NULL);
     profiling_stopwatch_init(WATCH_LOOP,"loop");
     profiling_stopwatch_init(WATCH_COMMAND,"command");
     profiling_stopwatch_init(WATCH_LED,"led");

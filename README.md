@@ -19,10 +19,11 @@
 | 2.2.1–2.2.5 | `221-command-time` | Частоты, неблокирующее мигание, uptime, блокирующий расчёт π, профилирование, смена частоты ядра |
 | 2.3.1–2.3.8 | `231-firmware-template` | Протокол, API, независимые задачи LED/кнопки/π, пять секундомеров, библиотеки и отделение SDK |
 | 2.3.9 | `239-two-buttons` | Независимые кнопки GP15 и GP14; состояния LED и круг периодов 250 → 500 → 1000 мс |
+| 2.3.9д | `239-two-buttons` | Короткое нажатие GP15 при отпускании; удержание 1 с однократно включает мигание |
 | 3.1.1–3.1.5 | `311-adc` | АЦП GP26, температура, телеметрия, CSV/графики и управление RC-цепью с оценкой τ |
 
 Светодиод подключён к GP25, кнопки замыкают свои выводы на GND. Вторая кнопка нужна только проекту `239-two-buttons`.
-Дополнительное задание 2.3.9д в эту реализацию не входит.
+Для 2.3.9д используется та же схема двух кнопок; [проверка на плате](239-two-buttons/README.md).
 
 ## Сборка
 
@@ -124,6 +125,7 @@ python tools/generate-example-logs.py --runtime tests/host/build/example_runtime
 [![check-2-3-7](https://github.com/Maksim-Osipov/es-student/actions/workflows/check-2-3-7.yml/badge.svg)](https://github.com/Maksim-Osipov/es-student/actions/workflows/check-2-3-7.yml)
 [![check-2-3-8](https://github.com/Maksim-Osipov/es-student/actions/workflows/check-2-3-8.yml/badge.svg)](https://github.com/Maksim-Osipov/es-student/actions/workflows/check-2-3-8.yml)
 [![check-2-3-9](https://github.com/Maksim-Osipov/es-student/actions/workflows/check-2-3-9.yml/badge.svg)](https://github.com/Maksim-Osipov/es-student/actions/workflows/check-2-3-9.yml)
+[![check-2-3-9d](https://github.com/Maksim-Osipov/es-student/actions/workflows/check-2-3-9d.yml/badge.svg)](https://github.com/Maksim-Osipov/es-student/actions/workflows/check-2-3-9d.yml)
 [![host-tests](https://github.com/Maksim-Osipov/es-student/actions/workflows/host-tests.yml/badge.svg)](https://github.com/Maksim-Osipov/es-student/actions/workflows/host-tests.yml)
 [![check-3-1-1](https://github.com/Maksim-Osipov/es-student/actions/workflows/check-3-1-1.yml/badge.svg)](https://github.com/Maksim-Osipov/es-student/actions/workflows/check-3-1-1.yml)
 [![check-3-1-2](https://github.com/Maksim-Osipov/es-student/actions/workflows/check-3-1-2.yml/badge.svg)](https://github.com/Maksim-Osipov/es-student/actions/workflows/check-3-1-2.yml)
