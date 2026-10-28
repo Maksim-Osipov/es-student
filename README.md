@@ -2,6 +2,11 @@
 
 Практические задания курса «Встраиваемые системы», Raspberry Pi Pico / RP2040.
 
+**Занятие 3.1 готово к работе в вузе:** [прошивка, подключение и запуск всех измерений](311-adc/README.md).
+В `311-adc/firmware/311_adc.uf2` лежит готовый файл для загрузки через BOOTSEL.
+Исходные результаты 3.1 помечены как учебная модель без платы;
+`python capture_all.py` из папки `311-adc` заменяет их реальными измерениями.
+
 Логи `device-*.log` для 1.3 и модуля 2 — **учебные примеры без платы**.
 Их источник указан в шапке; физические измерения они не подтверждают.
 Исходные скрипты `check-*.py` сохранены для получения логов по USB.
@@ -13,6 +18,7 @@
 | 2.2.1–2.2.5 | `221-command-time` | Частоты, неблокирующее мигание, uptime, блокирующий расчёт π, профилирование, смена частоты ядра |
 | 2.3.1–2.3.8 | `231-firmware-template` | Протокол, API, независимые задачи LED/кнопки/π, пять секундомеров, библиотеки и отделение SDK |
 | 2.3.9 | `239-two-buttons` | Независимые кнопки GP15 и GP14; состояния LED и круг периодов 250 → 500 → 1000 мс |
+| 3.1.1–3.1.5 | `311-adc` | АЦП GP26, температура, телеметрия, CSV/графики и управление RC-цепью с оценкой τ |
 
 Светодиод подключён к GP25, кнопки замыкают свои выводы на GND. Вторая кнопка нужна только проекту `239-two-buttons`.
 Дополнительное задание 2.3.9д в эту реализацию не входит.
@@ -35,6 +41,7 @@ cmake --build 231-firmware-template/build --parallel
 ## Проверка без платы
 
 ```sh
+python -m pip install -r 311-adc/requirements.txt
 cmake -S tests/host -B tests/host/build
 cmake --build tests/host/build --config Debug
 ctest --test-dir tests/host/build -C Debug --output-on-failure
@@ -56,6 +63,10 @@ python tools/generate-example-logs.py --runtime tests/host/build/example_runtime
 В 2.2 время вычисления оценивается по 585 тактам на член ряда, частоты задаются моделью.
 В 2.3 ответы выдаёт настоящий C-код протокола/API/задач с модельным временем и GPIO.
 Нулевой серийный номер во всех примерах — условный идентификатор.
+
+Примеры 3.1 воспроизводятся отдельно: `python tools/generate-adc-examples.py --runtime tests/host/build/Debug/adc_runtime.exe`
+(на Linux — `tests/host/build/adc_runtime`). Они исполняют настоящий C-код `311-adc` с
+моделью АЦП, времени и RC-цепи. Источник указан в логах, JSON рядом с CSV и на графиках.
 
 ## Проверка на плате
 
@@ -113,3 +124,8 @@ python tools/generate-example-logs.py --runtime tests/host/build/example_runtime
 [![check-2-3-8](https://github.com/Maksim-Osipov/es-student/actions/workflows/check-2-3-8.yml/badge.svg)](https://github.com/Maksim-Osipov/es-student/actions/workflows/check-2-3-8.yml)
 [![check-2-3-9](https://github.com/Maksim-Osipov/es-student/actions/workflows/check-2-3-9.yml/badge.svg)](https://github.com/Maksim-Osipov/es-student/actions/workflows/check-2-3-9.yml)
 [![host-tests](https://github.com/Maksim-Osipov/es-student/actions/workflows/host-tests.yml/badge.svg)](https://github.com/Maksim-Osipov/es-student/actions/workflows/host-tests.yml)
+[![check-3-1-1](https://github.com/Maksim-Osipov/es-student/actions/workflows/check-3-1-1.yml/badge.svg)](https://github.com/Maksim-Osipov/es-student/actions/workflows/check-3-1-1.yml)
+[![check-3-1-2](https://github.com/Maksim-Osipov/es-student/actions/workflows/check-3-1-2.yml/badge.svg)](https://github.com/Maksim-Osipov/es-student/actions/workflows/check-3-1-2.yml)
+[![check-3-1-3](https://github.com/Maksim-Osipov/es-student/actions/workflows/check-3-1-3.yml/badge.svg)](https://github.com/Maksim-Osipov/es-student/actions/workflows/check-3-1-3.yml)
+[![check-3-1-4](https://github.com/Maksim-Osipov/es-student/actions/workflows/check-3-1-4.yml/badge.svg)](https://github.com/Maksim-Osipov/es-student/actions/workflows/check-3-1-4.yml)
+[![check-3-1-5](https://github.com/Maksim-Osipov/es-student/actions/workflows/check-3-1-5.yml/badge.svg)](https://github.com/Maksim-Osipov/es-student/actions/workflows/check-3-1-5.yml)

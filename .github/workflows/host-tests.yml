@@ -5,6 +5,7 @@ on:
       - 'libs/**'
       - '231-firmware-template/**'
       - '239-two-buttons/**'
+      - '311-adc/**'
       - 'tests/**'
       - '.github/workflows/host-tests.yml'
   workflow_dispatch:
@@ -15,6 +16,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7
+      - name: Библиотеки приёма и построения графиков
+        run: python3 -m pip install -r 311-adc/requirements.txt
       - name: Сборка кода задач с тестовыми часами и GPIO
         run: |
           cmake -S tests/host -B tests/host/build -DCMAKE_BUILD_TYPE=Debug

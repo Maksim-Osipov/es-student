@@ -1,0 +1,49 @@
+источник: учебная программная модель, без платы и физических измерений
+модель: настоящий C-код 311-adc; синтетические часы, ADC, GPIO и USB-идентичность
+задание: 3.1.1
+проект: 311-adc
+устройство: 2e8a:000a
+серийный номер: 0000000000000000
+порт: SIMULATED
+начало: условная эпоха воспроизводимого примера
+   0.000 -->
+   0.500 --> help
+   0.500 <-- help
+   0.500 <-- help             list of commands
+   0.500 <-- info             device passport
+   0.500 <-- uptime           time since reset
+   0.500 <-- led_enable       turn LED on
+   0.500 <-- led_disable      turn LED off
+   0.500 <-- led_blink        blink LED
+   0.500 <-- led_period       set period in ms
+   0.500 <-- button           button state and presses
+   0.500 <-- pi_start         start calculation [terms]
+   0.500 <-- pi               calculation result
+   0.500 <-- profiling        stopwatch results
+   0.500 <-- profiling_reset  reset stopwatches
+   0.500 <-- get_voltage      voltage on GP26, ADC input 0
+   0.500 <-- get_temp         chip temperature, degrees Celsius
+   0.500 <-- tm_start         start telemetry [period_ms], minimum 10 ms
+   0.500 <-- tm_stop          stop telemetry
+   0.500 <-- charge_on        charge RC circuit through GP22
+   0.500 <-- charge_off       discharge RC circuit through GP22
+   1.500 --> info
+   1.500 <-- info
+   1.500 <-- name: es-adc
+   1.500 <-- version: 1.0.0
+   1.500 <-- project: 311-adc
+   1.500 <-- repo: https://github.com/Maksim-Osipov/es-student
+   1.500 <-- board: pico
+   1.500 <-- serial: 0000000000000000
+   1.500 <-- chip: manufacturer 0x927, part 0x0002, revision 2
+   1.500 <-- pico-sdk: 2.3.0
+   2.500 --> get_voltage
+   2.500 <-- get_voltage
+   2.500 <-- voltage: 0.612 V
+   3.500 --> get_voltage
+   3.500 <-- get_voltage
+   3.500 <-- voltage: 0.593 V
+   4.500 --> get_voltage
+   4.500 <-- get_voltage
+   4.500 <-- voltage: 0.580 V
+итог: отправлено кадров 6, принято строк 34

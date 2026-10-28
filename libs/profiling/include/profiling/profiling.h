@@ -4,7 +4,9 @@
 #ifndef PROFILING_ENABLED
 #define PROFILING_ENABLED 1
 #endif
+#ifndef PROFILING_STOPWATCH_COUNT
 #define PROFILING_STOPWATCH_COUNT 5
+#endif
 typedef struct {
     const char *name;
     uint64_t count;
