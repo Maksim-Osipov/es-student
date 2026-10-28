@@ -4,3 +4,5 @@ build/
 __pycache__/
 configure.log
 compile.log
+311-adc/firmware/311_adc.uf2
+311-adc/firmware/SHA256SUMS

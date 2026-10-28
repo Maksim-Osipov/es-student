@@ -1,0 +1,36 @@
+name: Готовая прошивка и комплект 3.1
+on:
+  push:
+    paths:
+      - '311-adc/**'
+      - 'libs/**'
+      - 'tools/package-adc.py'
+      - '.github/workflows/adc-firmware.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  firmware:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - name: Инструменты курса
+        uses: ant-lab-ru/es-test/.github/actions/pico-toolchain@master
+      - name: Сборка прошивки для Raspberry Pi Pico
+        run: |
+          cmake -S 311-adc -B 311-adc/build -G "Unix Makefiles" -DCMAKE_BUILD_TYPE=Release
+          cmake --build 311-adc/build --parallel
+      - name: Комплект для компьютера в вузе
+        run: python3 tools/package-adc.py --output 311-adc/build/es-student-3.1-ready.zip
+      - name: Скачать прошивку и комплект
+        uses: actions/upload-artifact@v7
+        with:
+          name: es-student-3.1-ready
+          path: |
+            311-adc/build/311_adc.uf2
+            311-adc/build/es-student-3.1-ready.zip
+          if-no-files-found: error
+          retention-days: 90
